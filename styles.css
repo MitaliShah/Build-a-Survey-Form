@@ -57,7 +57,7 @@ label{
     padding-top: 6px;
     margin-bottom: 5px; 
     padding-right: 0;
-    margin-left: 70%;    
+    margin-left: 20%;    
 }
 
 input{
@@ -68,6 +68,22 @@ input{
     margin-bottom: 5px;
 }
 
+#dropdown{
+    width: 60%;
+}
+
+
+input:invalid {
+    border: 2px solid red;
+  }
+
+.radio{
+    margin-left: 0;
+}
+.checkbox{
+    margin-left: 0;
+}
+
 .form-submit{
     height: 40px;
     width: 90px;
@@ -76,18 +92,33 @@ input{
     margin-top: 20px;
 }
 
+textarea{
+    width: 60%;
+    height: 40px;
+    margin-left: 0;
+}
+
 @media screen and (max-width: 800px){
-    label{
-        margin-left: 40%;
+    label{  
+        margin-left: 20%;
+        margin-right: 10px;
     }
     input{
         margin-right: 40%;
         width: 100%;        
     }
 
+    #dropdown{
+        width: 100%;
+    }
+
     #form-wrapper{
         max-width: 100%;
         margin: 0;
+    }
+
+    textarea{
+        width: 100%;
     }
 
 }
@@ -109,7 +140,7 @@ input{
 }
 
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 400px) {
     label{
         margin-left: 0;
     }
@@ -121,5 +152,4 @@ input{
         max-width: 100%;
         margin: 0;
     }
-
 }
