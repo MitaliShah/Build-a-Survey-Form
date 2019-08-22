@@ -5,117 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Farro&display=swap" rel="stylesheet">
-    <title>Build a Survey Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+    <title>Survey Form</title>
 </head>
 <body>
     <header>
-        <h1 id="title">
-            Survey Form
-        </h1>
+        <h1 id="title">Survey Form</h1>        
     </header>
-    <hr>
     <main>
         <section>
-            <p id="description">
-                Please fill out the <span id="survey-form-description"><strong>survey form</strong></span> below and let us know how we're doing :) 
-            </p>
-        </section>       
-        <section id="form-wrapper">
-            <form id="survey-form">
-                <div class="row">
-                    <div class="column-left">
-                        <label for="name" id="name-label">Name:</label>
-                    </div>
-                    <div class="column-right">
-                        <input type="text" id="name" placeholder="Enter your name" required>
-                    </div>                    
-                </div>
-                
-                <div class="row">
-                    <div class="column-left">
-                        <label for="email" id="email-label">Email:</label>
-                    </div>
-                    <div class="column-right">
-                        <input type="email" id="email" placeholder="Enter your email" required>
-                    </div>                    
-                </div>
-
-                <div class="row">
-                    <div class="column-left">
-                        <label for="age" id="number-label">Age:</label>
-                    </div>
-                    <div class="column-right">
-                        <input type="number" placeholder="Enter your age" id="number" min="1" max="150">  
-                    </div>                
-                </div>
-
-                <div class="row">
-                    <div class="column-left">
-                        <label for="role">Please select your role:</label>
-                    </div>
-                    <div class="column-right">
-                        <select id="dropdown" name="role">
-                        <option disabled value>Select your role</option>
-                        <option value="Student">Student</option>
-                        <option value="Experienced Developer">Experienced Developer</option>
-                        <option value="other">Other</option>
-                        </select>
-                    </div>                
-                </div>
-
-                <div class="row">
-                    <div class="column-left">
-                        <label>Would you recommend freecodecamp?</label>
-                    </div>
-                    <div class="column-right">
-                        <label class="radio">Yes
-                            <input type="radio" name="radio" value="yes">
-                        </label>
-                        <label class="radio">No
-                            <input type="radio" name="radio" value="no">
-                        </label>                                            
-                        <br>    
-                    </div>                
-                </div>
-
-                <div class="row">
-                <div class="column-left">
-                    <label>Please tell us about your interest</label>
-                </div>
-                <div class="column-right">
-                    <label class="checkbox">Front-end
-                        <input type="checkbox" value="front-end">
-                    </label>
-                    <label class="checkbox">Full-stack
-                        <input type="checkbox" value="full-stack">
-                    </label>
-                    <label class="checkbox">Design
-                        <input type="checkbox" value="design">
-                    </label>                                       
-                    <br>    
-                </div>                
-                </div>                
-                
-                <div class="row">
-                        <div class="column-left">
-                            <label>Any Suggestions?:</label>
-                        </div>
-                        <div class="column-right">
-                            <textarea rows="3" placeholder="Please enter your suggestions here">
-                            </textarea>
-                        </div>                    
-                    </div>
-
-                <div class="row">
-                    <div class="form-submit">
-                        <button id="submit" type="submit">Submit</button>    
-                    </div>                    
-                </div>     
-            </form>
+            <p id="description">Let us know how we can improve freeCodeCamp</p>
         </section>
-        
+        <form action="index.html" id="survey-form">
+            <fieldset>
+                <legend>Personal Information:</legend>
+
+                <label id="name-label" for="name">Name:</label>
+                <input id="name" type="text" size="30" placeholder="Enter your name" required>
+
+                <label id="email-label" for="email">Email:</label>
+                <input id="email" type="email" placeholder="Enter your email" size="30" required>
+
+                <label id="number-label" for="number">Years of experience with programming:</label>
+                <input id="number" type="number" size="30" min="1" max="50" placeholder="Enter your experience" required>   
+
+                <label>Age:</label>
+                    <input type="radio" id="below_18" value="below_18" name="age">
+                    <label for="below_18">Below 18</label><br>
+
+                    <input type="radio" id="18_plus" value="18_plus" name="age">
+                    <label for="18_plus">18 plus</label><br>
+
+                    <label>Things that should be improved in the future
+                        (Check all that apply):</label>
+
+                        <input type="checkbox" id="frontenddevelopement" value="frontenddevelopement_intrest" name="frontenddevelopement_intrest">
+                        <label class="checkbx-label" for="frontenddevelopement">Front End Developement</label><br>
+
+                        <input type="checkbox" id="backenddevelopement" value="backenddevelopement_intrest" name="backenddevelopement_intrest">
+                        <label class="checkbx-label" for="backenddevelopement">Back End Developement</label><br>
+
+                        <input type="checkbox" id="design" value="design_intrest" name="design_intrest">
+                        <label class="checkbx-label" for="design">Design</label><br>
+
+                Which option best describes your current role?
+                <select name="jobrole" id="dropdown">
+                    <option>Front-End-Developer</option>
+                    <option>Back-End-Developer</option>
+                    <option>Web Designer</option>
+                </select>
+
+                <label>Any Comments or Suggestions?</label>
+                <textarea id="comment" name="comment"></textarea>
+            </fieldset>
+
+                <button id="submit" type="submit">Submit</button>            
+
+        </form>
+
     </main>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <footer>
+
+    </footer>
+    
 </body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
